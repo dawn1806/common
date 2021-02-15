@@ -10,6 +10,8 @@ type MysqlConfig struct {
 	Port     int64  `json:"port"`
 }
 
+const MysqlConnection = "root:root@(127.0.0.1:3306)/micro?charset=utf8&parseTime=True&loc=Local"
+
 // 获取mysql的配置
 func GetMysqlFromConsul(config config.Config, path ...string) *MysqlConfig {
 	mysqlConfig := &MysqlConfig{}
